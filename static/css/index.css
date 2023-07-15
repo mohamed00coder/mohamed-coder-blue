@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* font-family: 'Kanit', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700;800&display=swap');
+/* font-family: 'Changa', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* font-family: 'Overpass', sans-serif; */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Changa', sans-serif;
+    height: fit-content;
+}
+a{
+    display: block;
+    text-decoration: none;
+    color: #eeeeee;
+}
+ul,li{
+    list-style-type: none;
+}
+header{
+    height: 650px;  
+    background-color: #eeeeee;
+}
+header nav{
+   /*  */
+    display: flex;
+    background-color: #333;
+    padding: 20px;
+    justify-content: space-between;  
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+}
+header nav .menu{
+    display: flex;  
+    width: 40%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    transition: 0.3s;
+    
+}
+header nav .menu li{
+    padding: 2px;
+}
+header nav .menu li a{
+    padding: 0px;
+}
+header .dropmenu{
+    display: none;
+    width: 40px;
+    height: 25px;
+}
+header .dropmenu .line1,.line2,.line3{
+    display: block;
+    width: 40px;
+    height: 5px;
+    background-color: #2e53e8;
+    margin: 5px 0;
+}
+/* content */
+header .first-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px;
+    margin: 5px;
+    margin-top: 60px;
+    
+}
+header .first-content .card-aboutme{
+    width: 630px;
+    height: 360px;
+    box-shadow: 0px 0px 5px 0px #333;
+    padding: 20px;
+    text-transform: capitalize;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 200;
+    font-size: 14px;
+}
+header .first-content .card-aboutme .box-img{
+    display: flex;
+    align-items: center;
+}
+header .first-content .card-aboutme .box-img p{
+    margin-left: 20px;
+    width: 60%;
+}
+header .first-content .card-aboutme .box-img img{
+    width: 160px;
+    border-radius: 100px;
+    background-color: #2e53e8;
+}
+
+
+/* main */
+main{
+    height: fit-content;
+    background-color: #d4d4d4;
+    overflow: hidden;
+}
+.card-skils{
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    text-transform: capitalize;
+    
+}
+.card-skils h1{
+    font-size: 50px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0px 0px 5px 0px #333;
+    z-index: 1;
+}
+.card-skils .box-skils{
+    display: flex;
+    height: 500px;
+    width: 100%;
+    background-color: #242424;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    border-radius: 7px;
+    
+    
+}
+.card-skils .box-skils .box1,.box2{
+    height: 360px;
+    width: 50%;
+    background-color: #2d07d4;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap column;
+    padding: 10px;
+}
+.card-skils .box-skils .box2{
+    background-color: #fff;
+    color: #333;
+
+}
+.box2 .content-box2,.content-box1{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+/*  */
+.bird {
+    position: relative;
+    top: 100px;
+    left: 25%;
+    width: 100px;
+    height: 100px;
+    background-image: url(https://images.emojiterra.com/google/noto-emoji/unicode-15/color/svg/2708.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: fly 10s linear infinite;
+    z-index: 0;
+}
+.smoke{
+    position: relative;
+    top: 100px;
+    left: -30%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #333;
+    opacity: 0;
+    animation: smoke 2s linear infinite;
+    z-index: 1;
+}
+.object {
+    position: relative;
+    top: 100px;
+    left: -20%;
+    width: 20px;
+    height: 20px;
+    background-color: blue;
+    opacity: 0;
+    animation: throw 2s linear infinite;
+    z-index: 2;
+}
+@keyframes fly {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(200px, -100px) rotate(45deg);
+    }
+    50% {
+        transform: translate(400px, 0) rotate(0deg);
+    }
+    75% {
+        transform: translate(200px, 100px) rotate(-45deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+@keyframes smoke {
+    0% {
+        transform: translate(0, 0) scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(200px, -100px) scale(2);
+        opacity: 0;
+    }
+}
+
+@keyframes throw {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(200px, 100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+/*  */
+
+.container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+    background-color: #eeeeee;
+}
+.container h1{
+    font-size: 40px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0px 0px 5px 0px #333;
+    z-index: 1;
+    text-transform: capitalize;
+}
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 100%;
+}
+
+.card {
+    width: 300px;
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 5px #0000004d;
+}
+footer{
+    background-color: #333;
+    height: 200px;
+    color: #fff;
+    text-align: center;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+footer h3{
+    margin: 25px;
+    order: 1;
+    font-family: 'Changa', sans-serif; 
+    font-weight: 300;
+}
+footer .box-img{
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: center;
+    flex-wrap: wrap;
+}
+footer .box-img div a{
+    background-color: #242424;
+    padding: 10px;
+    font-size: 10px;
+    border-radius: 5px; 
+    width: 60px;
+    transition: 0.5s;
+    margin:10px;
+}
+footer .box-img div #youtube:hover{
+    background-color: #c00404;
+}
+footer .box-img div #instagram:hover{
+    background-color: #9600b4;
+}
+footer .box-img div #facebook:hover{
+    background-color: #2d07d4;
+}
+footer .box-img div #whatsapp:hover{
+    background-color: #06a039;
+}
+footer .box-img div #github:hover{
+    background-color: #000;
+}
+footer .box-img div #linkedin:hover{
+    background-color: #068ad6;
+}
+
+footer .box-img div a img{
+    border-radius: 100px;
+    width: 30px;
+    box-shadow: 0 0 0px 5px transparent;
+    transition: 0.5s;
+    order:0;
+}
+footer .box-img div a img:hover{
+    box-shadow: 0 0 0px 5px #eeeeee;
+}
+@media screen and (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+}
+
+@media (max-width:843px){
+    header nav .menu{
+        width: 45%;
+        justify-content: space-around;
+    }
+}
+@media (max-width:754px){
+    header nav .menu{
+        width: 50%;
+        justify-content: space-around;
+    }
+}
+@media (max-width:561px){
+    header nav .menu{
+        width: 60%;
+        justify-content: space-around;
+    }
+
+}
+@media (max-width:489px){
+    header nav .menu{
+        width: 70%;
+        justify-content: space-around;
+    }
+    /* content */
+header .first-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px;
+    margin: 5px;
+    
+}
+header .first-content .card-aboutme{
+    width: 430px;
+    height: 200px;
+    box-shadow: 0px 0px 5px 0px #333;
+    padding: 20px;
+    text-transform: capitalize;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 200;
+    font-size: 10px;
+}
+header .first-content .card-aboutme .box-img{
+    display: flex;
+    align-items: center;
+}
+header .first-content .card-aboutme .box-img p{
+    margin-left: 20px;
+    width: 50%;
+}
+header .first-content .card-aboutme .box-img img{
+    width: 100px;
+    border-radius: 100px;
+    background-color: #2e53e8;
+
+}
+}
+@media (max-width:414px){
+
+    header{
+        height: 350px;  
+         background-color: #eeeeee;
+    }
+    header nav .menu{
+        display: none;
+    }
+    header .dropmenu{
+        display: flex;
+        flex-wrap: wrap;
+    }
+   /* dropmenu */
+.dropmenuFullCourse{
+    height: 30px;
+    width: 80px;
+    margin-left: -25px;
+    list-style-type: none;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;  
+    border-radius: 7px;
+    z-index: 100;
+}
+.dropmenuFullCourse:hover{
+    height: 220px;
+    overflow: visible;
+    background-color: #242424;
+}
+.dropmenuFullCourse li{
+    margin-top: 15px;
+    font-size: 13px;
+    padding: 1px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.dropmenuFullCourse a{
+    width: 60px;
+    margin: 5px;
+    transition: 0.5s;
+}
+.dropmenuFullCourse li:hover{
+    background-color: #757575;
+}
+
+
+    /* content */
+    header .first-content{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 30px;
+        margin: 5px;
+    }
+    header .first-content .card-aboutme{
+        width: 430px;
+        height: 190px;
+        box-shadow: 0px 0px 5px 0px #333;
+        padding: 20px;
+        text-transform: capitalize;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 200;
+        font-size: 6px;
+    }
+    header .first-content .card-aboutme .box-img{
+        display: flex;
+        align-items: center;
+        margin-top: 25px;
+    }
+    header .first-content .card-aboutme .box-img p{
+        margin-left: 20px;
+        width: 50%;
+    }
+    header .first-content .card-aboutme .box-img img{
+        width: 80px;
+        border-radius: 100px;
+        background-color: #2e53e8;
+    
+    }
+    .container {
+        display: flex;
+        flex-flow: wrap; 
+        justify-content: center;
+        align-items: center;
+        background-color: #eeeeee;
+    }
+    
+    .row {
+        display: flex;
+        justify-content: center; 
+        flex-flow: wrap column; 
+        align-items: center;
+        font-size: 12px;
+        flex-basis: 100%;
+    }
+    
+    .card {
+        width: 100px;
+        margin: 10px;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 5px #0000004d;
+    }
+  
+}
